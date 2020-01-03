@@ -9,6 +9,8 @@ const { access } = require('./src/utils/log')
 
 // 用于处理 post data
 const getPostData = (req) => {
+    console.log(Buffer.from("Hello Node"));
+    
     const promise = new Promise((resolve, reject) => {
         if(req.method !== 'POST') {
             resolve({})
