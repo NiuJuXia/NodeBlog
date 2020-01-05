@@ -13,11 +13,27 @@ const blogRouter = require('./routes/blog');
 const userRouter = require('./routes/user');
 
 var app = express(); 
-console.log([1].concat(10,[1,2,3]))
+// console.log([1].concat(10,[1,2,3]))
 // view engine setup
 // app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'jade');
 
+// app.use(function(req,res,next){
+//   console.log('1开始')
+//   next()
+//   console.log('1结束')
+// })
+// app.use(function(req,res,next){
+//   console.log('2开始')
+//   next()
+//   console.log('2结束')
+// })
+// app.use(function(req,res,next){
+//   console.log('3开始')
+//   next()
+//   console.log('3结束')
+// })
+//洋葱圈 回调方式
 const ENV = process.env.NODE_ENV
 if(ENV !== 'production') {
   app.use(logger('dev'));
